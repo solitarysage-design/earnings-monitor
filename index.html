@@ -141,6 +141,11 @@ function fmt(v, unit = "百万円") {
   return Number(v).toLocaleString("ja-JP") + unit;
 }
 
+function fmtDate(s) {
+  if (!s || s.length !== 8) return s;
+  return `${s.slice(0,4)}/${s.slice(4,6)}/${s.slice(6,8)}`;
+}
+
 function fmtYoy(v) {
   if (v == null) return { text: "N/A", cls: "na" };
   const sign = v >= 0 ? "+" : "";
@@ -183,7 +188,7 @@ function buildCard(code, entry) {
     <div class="card-header">
       <div>
         <div class="card-name">${name}</div>
-        <div class="card-date">${rec?.date ?? ""} ${rec?.doc_type ?? ""}</div>
+        <div class="card-date">${fmtDate(rec?.date ?? "")} ${rec?.doc_type ?? ""}</div>
       </div>
       <span class="card-code">${code}</span>
     </div>
@@ -203,7 +208,11 @@ function renderCards(data, filter = "") {
       code.includes(lower) ||
       entry.name.toLowerCase().includes(lower)
     )
-    .sort(([a], [b]) => a.localeCompare(b));
+    .sort(([, a], [, b]) => {
+      const da = latestRecord(a)?.date ?? "";
+      const db = latestRecord(b)?.date ?? "";
+      return db.localeCompare(da); // 最新日付順
+    });
 
   if (!entries.length) {
     container.innerHTML = '<div id="empty-msg">該当する銘柄がありません</div>';
@@ -256,12 +265,12 @@ function openDetail(code) {
 
   document.getElementById("detail-title").textContent = `${entry.name} (${code})`;
   const latestDate = latestRecord(entry)?.date ?? "";
-  document.getElementById("detail-meta").textContent = `直近更新: ${latestDate}  |  ${entry.records?.length ?? 0} 件`;
+  document.getElementById("detail-meta").textContent = `直近更新: ${fmtDate(latestDate)}  |  ${entry.records?.length ?? 0} 件`;
 
   destroyCharts();
 
   const recs = (entry.records || []).slice(-8); // 直近8件
-  const labels = recs.map(r => r.date);
+  const labels = recs.map(r => fmtDate(r.date));
   charts.revenue = buildChart("chart-revenue", labels, recs.map(r => r.revenue), "#3b82f6");
   charts.op      = buildChart("chart-op",      labels, recs.map(r => r.operating_profit), "#10b981");
   charts.ord     = buildChart("chart-ord",     labels, recs.map(r => r.ordinary_profit), "#f59e0b");
