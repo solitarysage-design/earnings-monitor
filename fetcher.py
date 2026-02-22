@@ -5,7 +5,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from config import EARNINGS_KEYWORDS, KABUTAN_FINANCE_URL
+from config import EARNINGS_KEYWORDS, KABUTAN_FINANCE_URL, KABUTAN_STOCK_URL
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; EarningsMonitor/1.0; +https://github.com)"}
 
@@ -67,6 +67,61 @@ def _yoy(current: float | None, prev: float | None) -> float | None:
     if current is None or prev is None or prev == 0:
         return None
     return round((current - prev) / abs(prev) * 100, 1)
+
+
+def _parse_market_cap(text: str) -> float | None:
+    """時価総額を億円単位に変換: '57兆4,148億円' → 574148.0"""
+    text = text.replace(",", "").strip()
+    try:
+        if "兆" in text:
+            parts = text.split("兆")
+            cho = float(parts[0])
+            oku = float(parts[1].replace("億円", "").replace("億", "") or 0)
+            return cho * 10000 + oku
+        elif "億" in text:
+            return float(text.replace("億円", "").replace("億", ""))
+        elif "百万円" in text:
+            return round(float(text.replace("百万円", "")) / 100, 1)
+    except (ValueError, IndexError):
+        pass
+    return None
+
+
+def _parse_rate(text: str) -> float | None:
+    """'13.3倍', '2.61％' などを float に変換する。"""
+    text = re.sub(r"[倍％%]", "", text).strip()
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def fetch_kabutan_metrics(code: str) -> dict:
+    """株探のメインページから時価総額・PER・PBR・配当利回りを取得する。"""
+    url = KABUTAN_STOCK_URL.format(code=code)
+    result = {"market_cap": None, "per": None, "pbr": None, "dividend_yield": None}
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=20)
+        resp.encoding = "utf-8"
+        soup = BeautifulSoup(resp.text, "html.parser")
+        LABEL_MAP = {
+            "時価総額": ("market_cap", _parse_market_cap),
+            "PER":     ("per",         _parse_rate),
+            "PBR":     ("pbr",         _parse_rate),
+            "利回り":  ("dividend_yield", _parse_rate),
+        }
+        for el in soup.find_all(["span", "dt", "th", "td"]):
+            label = el.get_text(strip=True)
+            if label in LABEL_MAP:
+                field, parser = LABEL_MAP[label]
+                if result[field] is not None:
+                    continue  # すでに取得済み
+                nxt = el.find_next_sibling(["span", "dd", "td"])
+                if nxt:
+                    result[field] = parser(nxt.get_text(strip=True))
+    except Exception as exc:
+        print(f"[株探metrics] code={code} error: {exc}")
+    return result
 
 
 def fetch_kabutan_financials(code: str) -> dict:

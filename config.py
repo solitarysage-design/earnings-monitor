@@ -8,6 +8,7 @@ TDNET_BASE_URL = "https://www.release.tdnet.info/inbs"
 
 # 株探
 KABUTAN_FINANCE_URL = "https://kabutan.jp/stock/finance?code={code}"
+KABUTAN_STOCK_URL   = "https://kabutan.jp/stock/?code={code}"
 
 # Data
 HISTORY_FILE = "data/history.json"

@@ -99,6 +99,16 @@
 
     #empty-msg { padding: 3rem 1.5rem; color: #64748b; text-align: center; }
 
+    .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.6rem; }
+    .badges span { font-size: 0.65rem; background: #0f172a; border-radius: 0.3rem;
+                   padding: 0.2rem 0.45rem; color: #94a3b8; white-space: nowrap; }
+    .badges span b { color: #e2e8f0; font-weight: 600; }
+
+    .val-summary { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+    .val-chip { background: #0f172a; border-radius: 0.4rem; padding: 0.4rem 0.6rem;
+                font-size: 0.75rem; color: #94a3b8; }
+    .val-chip b { display: block; font-size: 0.9rem; color: #f1f5f9; margin-top: 0.1rem; }
+
     @media (max-width: 480px) {
       #stock-list { grid-template-columns: 1fr; }
     }
@@ -123,6 +133,7 @@
   <button id="detail-close">&#x2715;</button>
   <div id="detail-title"></div>
   <div id="detail-meta"></div>
+  <div class="val-summary" id="detail-valuation"></div>
   <div class="chart-wrap"><h3>売上高 (百万円)</h3><canvas id="chart-revenue"></canvas></div>
   <div class="chart-wrap"><h3>営業利益 (百万円)</h3><canvas id="chart-op"></canvas></div>
   <div class="chart-wrap"><h3>経常利益 (百万円)</h3><canvas id="chart-ord"></canvas></div>
@@ -139,6 +150,12 @@ let charts = {};
 function fmt(v, unit = "百万円") {
   if (v == null) return "N/A";
   return Number(v).toLocaleString("ja-JP") + unit;
+}
+
+function fmtMarketCap(v) {
+  if (v == null) return "N/A";
+  if (v >= 10000) return `${(v / 10000).toFixed(1)}兆円`;
+  return `${Math.round(v).toLocaleString("ja-JP")}億円`;
 }
 
 function fmtDate(s) {
@@ -184,6 +201,14 @@ function buildCard(code, entry) {
       </div>`;
   }).join("");
 
+  const badgesHtml = `
+    <div class="badges">
+      <span>時価総額 <b>${fmtMarketCap(rec?.market_cap)}</b></span>
+      <span>PER <b>${rec?.per != null ? rec.per + "倍" : "N/A"}</b></span>
+      <span>PBR <b>${rec?.pbr != null ? rec.pbr + "倍" : "N/A"}</b></span>
+      <span>利回り <b>${rec?.dividend_yield != null ? rec.dividend_yield + "%" : "N/A"}</b></span>
+    </div>`;
+
   card.innerHTML = `
     <div class="card-header">
       <div>
@@ -192,7 +217,8 @@ function buildCard(code, entry) {
       </div>
       <span class="card-code">${code}</span>
     </div>
-    <div class="metrics">${metricsHtml}</div>`;
+    <div class="metrics">${metricsHtml}</div>
+    ${badgesHtml}`;
 
   card.addEventListener("click", () => openDetail(code));
   return card;
@@ -266,6 +292,15 @@ function openDetail(code) {
   document.getElementById("detail-title").textContent = `${entry.name} (${code})`;
   const latestDate = latestRecord(entry)?.date ?? "";
   document.getElementById("detail-meta").textContent = `直近更新: ${fmtDate(latestDate)}  |  ${entry.records?.length ?? 0} 件`;
+
+  // バリュエーション指標（直近レコード）
+  const lr = latestRecord(entry);
+  const valEl = document.getElementById("detail-valuation");
+  valEl.innerHTML = `
+    <div class="val-chip"><span>時価総額</span><b>${fmtMarketCap(lr?.market_cap)}</b></div>
+    <div class="val-chip"><span>PER</span><b>${lr?.per != null ? lr.per + "倍" : "N/A"}</b></div>
+    <div class="val-chip"><span>PBR</span><b>${lr?.pbr != null ? lr.pbr + "倍" : "N/A"}</b></div>
+    <div class="val-chip"><span>利回り</span><b>${lr?.dividend_yield != null ? lr.dividend_yield + "%" : "N/A"}</b></div>`;
 
   destroyCharts();
 

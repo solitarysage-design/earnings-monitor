@@ -19,13 +19,15 @@ def main(date_str: str | None = None) -> None:
     disclosures = fetcher.fetch_tdnet_disclosures(date_str)
     print(f"[run] 決算短信: {len(disclosures)} 件")
 
-    # 2. 株探から財務数値を取得
+    # 2. 株探から財務数値・バリュエーション指標を取得
     financials_map: dict[str, dict] = {}
+    metrics_map: dict[str, dict] = {}
     for d in disclosures:
         code = d["code"]
         if code not in financials_map:
             print(f"[run] 株探取得: {code} {d['name']}")
             financials_map[code] = fetcher.fetch_kabutan_financials(code)
+            metrics_map[code] = fetcher.fetch_kabutan_metrics(code)
 
     # 3. Slack 通知
     notifier.send(disclosures, financials_map)
@@ -35,12 +37,14 @@ def main(date_str: str | None = None) -> None:
     for d in disclosures:
         code = d["code"]
         fin = financials_map.get(code, {})
+        met = metrics_map.get(code, {})
         record = {
             "date": date_str,
             "time": d["time"],
             "doc_type": d["doc_type"],
             "url": d["url"],
             **fin,
+            **met,
         }
         hist = history.add_record(hist, code, d["name"], record)
     history.save(hist)
