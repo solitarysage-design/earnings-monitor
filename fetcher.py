@@ -10,16 +10,15 @@ from config import EARNINGS_KEYWORDS, KABUTAN_FINANCE_URL
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; EarningsMonitor/1.0; +https://github.com)"}
 
 # やのしん TDnet 非公式 API（JSON形式で適時開示一覧を取得できる）
-YANOSHIN_API = "https://webapi.yanoshin.jp/webapi/tdnet/list/{date}-{date}.json"
+YANOSHIN_API = "https://webapi.yanoshin.jp/webapi/tdnet/list/{date}-{date}.json"  # date: YYYYMMDD
 
 
 # ── TDnet (やのしんAPI) ───────────────────────────────────────────────────────
 
 def fetch_tdnet_disclosures(date_str: str) -> list[dict]:
     """date_str: YYYYMMDD 形式。当日の決算短信一覧を返す。"""
-    # API は YYYY-MM-DD 形式
-    d = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:]}"
-    url = YANOSHIN_API.format(date=d)
+    # API は YYYYMMDD 形式
+    url = YANOSHIN_API.format(date=date_str)
     results = []
     try:
         resp = requests.get(url, headers=HEADERS, params={"limit": 10000}, timeout=30)
