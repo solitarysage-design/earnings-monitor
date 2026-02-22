@@ -1,0 +1,41 @@
+name: Backfill Earnings Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "開始日 (YYYYMMDD)"
+        required: true
+      end_date:
+        description: "終了日 (YYYYMMDD)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backfill
+        run: python backfill.py ${{ github.event.inputs.start_date }} ${{ github.event.inputs.end_date }}
+
+      - name: Commit updated history.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/history.json
+          git diff --cached --quiet || git commit -m "chore: backfill ${{ github.event.inputs.start_date }}-${{ github.event.inputs.end_date }} [skip ci]"
+          git push
