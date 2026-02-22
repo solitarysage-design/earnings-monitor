@@ -56,8 +56,10 @@ def send(disclosures: list[dict], financials_map: dict[str, dict]) -> None:
         )
         blocks.append({"type": "divider"})
 
-    payload = {"blocks": blocks}
-    _post(payload)
+    # Slack の Block Kit は 50 ブロックまでの制限があるため分割送信
+    BLOCK_LIMIT = 50
+    for i in range(0, len(blocks), BLOCK_LIMIT):
+        _post({"blocks": blocks[i:i + BLOCK_LIMIT]})
 
 
 def _post(payload: dict) -> None:
