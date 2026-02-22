@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git --version && gh --version && gh auth status 2>&1)",
+      "Bash(gh auth:*)",
+      "Bash(cd:*)"
+    ]
+  }
+}

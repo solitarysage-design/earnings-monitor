@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>決算モニター</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+
+    header {
+      background: #1e293b;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #334155;
+      position: sticky; top: 0; z-index: 100;
+    }
+    header h1 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; }
+    header span { font-size: 0.75rem; color: #64748b; }
+
+    #search-bar {
+      padding: 1rem 1.5rem 0;
+    }
+    #search-bar input {
+      width: 100%; max-width: 400px;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    #search-bar input:focus { border-color: #3b82f6; }
+
+    #stock-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 0.75rem;
+      border: 1px solid #334155;
+      padding: 1rem;
+      cursor: pointer;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .card:hover { border-color: #3b82f6; box-shadow: 0 0 0 1px #3b82f6; }
+    .card.active { border-color: #60a5fa; background: #1e3a5f; }
+
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+    .card-name { font-weight: 600; font-size: 1rem; color: #f1f5f9; }
+    .card-code { font-size: 0.75rem; background: #334155; padding: 0.15rem 0.4rem; border-radius: 0.3rem; color: #94a3b8; }
+    .card-date { font-size: 0.7rem; color: #64748b; margin-top: 0.25rem; }
+
+    .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .metric { background: #0f172a; border-radius: 0.5rem; padding: 0.5rem; }
+    .metric-label { font-size: 0.65rem; color: #64748b; margin-bottom: 0.2rem; }
+    .metric-value { font-size: 0.9rem; font-weight: 600; color: #f1f5f9; }
+    .metric-yoy { font-size: 0.75rem; margin-top: 0.1rem; }
+    .pos { color: #34d399; }
+    .neg { color: #f87171; }
+    .na  { color: #64748b; }
+
+    #detail-panel {
+      position: fixed; top: 0; right: -100%; width: min(480px, 100%);
+      height: 100%; background: #1e293b;
+      border-left: 1px solid #334155;
+      padding: 1.5rem;
+      overflow-y: auto;
+      transition: right 0.25s ease;
+      z-index: 200;
+    }
+    #detail-panel.open { right: 0; }
+
+    #detail-close {
+      background: none; border: none; color: #94a3b8;
+      font-size: 1.5rem; cursor: pointer; float: right; line-height: 1;
+    }
+    #detail-close:hover { color: #f1f5f9; }
+
+    #detail-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; color: #f1f5f9; }
+    #detail-meta  { font-size: 0.75rem; color: #64748b; margin-bottom: 1.25rem; }
+
+    .chart-wrap { margin-bottom: 1.5rem; }
+    .chart-wrap h3 { font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem; }
+
+    #overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5); z-index: 150;
+    }
+    #overlay.show { display: block; }
+
+    #empty-msg { padding: 3rem 1.5rem; color: #64748b; text-align: center; }
+
+    @media (max-width: 480px) {
+      #stock-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📊 決算モニター</h1>
+  <span id="last-updated"></span>
+</header>
+
+<div id="search-bar">
+  <input type="text" id="search" placeholder="銘柄名・コードで絞り込み…" />
+</div>
+
+<div id="stock-list"><div id="empty-msg">読み込み中…</div></div>
+
+<div id="overlay"></div>
+
+<div id="detail-panel">
+  <button id="detail-close">&#x2715;</button>
+  <div id="detail-title"></div>
+  <div id="detail-meta"></div>
+  <div class="chart-wrap"><h3>売上高 (百万円)</h3><canvas id="chart-revenue"></canvas></div>
+  <div class="chart-wrap"><h3>営業利益 (百万円)</h3><canvas id="chart-op"></canvas></div>
+  <div class="chart-wrap"><h3>経常利益 (百万円)</h3><canvas id="chart-ord"></canvas></div>
+  <div class="chart-wrap"><h3>純利益 (百万円)</h3><canvas id="chart-net"></canvas></div>
+</div>
+
+<script>
+const HISTORY_URL = "./data/history.json";
+let allData = {};
+let charts = {};
+
+// ── ユーティリティ ──────────────────────────────────────────────────────────
+
+function fmt(v, unit = "百万円") {
+  if (v == null) return "N/A";
+  return Number(v).toLocaleString("ja-JP") + unit;
+}
+
+function fmtYoy(v) {
+  if (v == null) return { text: "N/A", cls: "na" };
+  const sign = v >= 0 ? "+" : "";
+  return { text: `${sign}${Number(v).toFixed(1)}%`, cls: v >= 0 ? "pos" : "neg" };
+}
+
+function latestRecord(entry) {
+  const recs = entry.records || [];
+  return recs.length ? recs[recs.length - 1] : null;
+}
+
+// ── カード描画 ──────────────────────────────────────────────────────────────
+
+function buildCard(code, entry) {
+  const rec = latestRecord(entry);
+  const name = entry.name;
+
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.code = code;
+
+  const fields = [
+    { label: "売上高", val: rec?.revenue, yoy: rec?.revenue_yoy },
+    { label: "営業利益", val: rec?.operating_profit, yoy: rec?.operating_profit_yoy },
+    { label: "経常利益", val: rec?.ordinary_profit, yoy: rec?.ordinary_profit_yoy },
+    { label: "純利益",   val: rec?.net_profit,       yoy: rec?.net_profit_yoy },
+  ];
+
+  const metricsHtml = fields.map(f => {
+    const yoy = fmtYoy(f.yoy);
+    return `
+      <div class="metric">
+        <div class="metric-label">${f.label}</div>
+        <div class="metric-value">${fmt(f.val, "")}</div>
+        <div class="metric-yoy ${yoy.cls}">${yoy.text}</div>
+      </div>`;
+  }).join("");
+
+  card.innerHTML = `
+    <div class="card-header">
+      <div>
+        <div class="card-name">${name}</div>
+        <div class="card-date">${rec?.date ?? ""} ${rec?.doc_type ?? ""}</div>
+      </div>
+      <span class="card-code">${code}</span>
+    </div>
+    <div class="metrics">${metricsHtml}</div>`;
+
+  card.addEventListener("click", () => openDetail(code));
+  return card;
+}
+
+function renderCards(data, filter = "") {
+  const container = document.getElementById("stock-list");
+  container.innerHTML = "";
+  const lower = filter.toLowerCase();
+  const entries = Object.entries(data)
+    .filter(([code, entry]) =>
+      !lower ||
+      code.includes(lower) ||
+      entry.name.toLowerCase().includes(lower)
+    )
+    .sort(([a], [b]) => a.localeCompare(b));
+
+  if (!entries.length) {
+    container.innerHTML = '<div id="empty-msg">該当する銘柄がありません</div>';
+    return;
+  }
+  entries.forEach(([code, entry]) => container.appendChild(buildCard(code, entry)));
+}
+
+// ── 詳細パネル ──────────────────────────────────────────────────────────────
+
+function destroyCharts() {
+  Object.values(charts).forEach(c => c.destroy());
+  charts = {};
+}
+
+function buildChart(canvasId, labels, values, color) {
+  const ctx = document.getElementById(canvasId).getContext("2d");
+  return new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        backgroundColor: color + "99",
+        borderColor: color,
+        borderWidth: 1.5,
+        borderRadius: 4,
+      }],
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: "#94a3b8", font: { size: 10 } }, grid: { color: "#334155" } },
+        y: { ticks: { color: "#94a3b8", font: { size: 10 } }, grid: { color: "#334155" } },
+      },
+    },
+  });
+}
+
+function openDetail(code) {
+  const entry = allData[code];
+  if (!entry) return;
+
+  const panel = document.getElementById("detail-panel");
+  const overlay = document.getElementById("overlay");
+
+  document.querySelectorAll(".card.active").forEach(c => c.classList.remove("active"));
+  document.querySelector(`.card[data-code="${code}"]`)?.classList.add("active");
+
+  document.getElementById("detail-title").textContent = `${entry.name} (${code})`;
+  const latestDate = latestRecord(entry)?.date ?? "";
+  document.getElementById("detail-meta").textContent = `直近更新: ${latestDate}  |  ${entry.records?.length ?? 0} 件`;
+
+  destroyCharts();
+
+  const recs = (entry.records || []).slice(-8); // 直近8件
+  const labels = recs.map(r => r.date);
+  charts.revenue = buildChart("chart-revenue", labels, recs.map(r => r.revenue), "#3b82f6");
+  charts.op      = buildChart("chart-op",      labels, recs.map(r => r.operating_profit), "#10b981");
+  charts.ord     = buildChart("chart-ord",     labels, recs.map(r => r.ordinary_profit), "#f59e0b");
+  charts.net     = buildChart("chart-net",     labels, recs.map(r => r.net_profit), "#8b5cf6");
+
+  panel.classList.add("open");
+  overlay.classList.add("show");
+}
+
+function closeDetail() {
+  document.getElementById("detail-panel").classList.remove("open");
+  document.getElementById("overlay").classList.remove("show");
+  document.querySelectorAll(".card.active").forEach(c => c.classList.remove("active"));
+  destroyCharts();
+}
+
+document.getElementById("detail-close").addEventListener("click", closeDetail);
+document.getElementById("overlay").addEventListener("click", closeDetail);
+
+// ── 検索 ────────────────────────────────────────────────────────────────────
+
+document.getElementById("search").addEventListener("input", e => {
+  renderCards(allData, e.target.value);
+});
+
+// ── 初期ロード ───────────────────────────────────────────────────────────────
+
+async function loadData() {
+  try {
+    const resp = await fetch(HISTORY_URL + "?t=" + Date.now());
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    allData = await resp.json();
+
+    const count = Object.keys(allData).length;
+    document.getElementById("last-updated").textContent =
+      `${count} 銘柄 | ${new Date().toLocaleString("ja-JP")}`;
+
+    if (count === 0) {
+      document.getElementById("stock-list").innerHTML =
+        '<div id="empty-msg">データがまだありません。GitHub Actions が実行されると表示されます。</div>';
+      return;
+    }
+    renderCards(allData);
+  } catch (err) {
+    document.getElementById("stock-list").innerHTML =
+      `<div id="empty-msg">データ読み込みエラー: ${err.message}</div>`;
+    console.error(err);
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>
