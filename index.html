@@ -21,6 +21,13 @@
     header h1 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; }
     header span { font-size: 0.75rem; color: #64748b; }
 
+    #fav-toggle {
+      background: none; border: 1px solid #334155; border-radius: 0.5rem;
+      color: #94a3b8; font-size: 0.8rem; padding: 0.35rem 0.7rem;
+      cursor: pointer; white-space: nowrap; transition: all 0.15s;
+    }
+    #fav-toggle.active { background: #854d0e; border-color: #f59e0b; color: #fde68a; }
+
     #search-bar {
       padding: 1rem 1.5rem 0;
     }
@@ -53,6 +60,15 @@
     }
     .card:hover { border-color: #3b82f6; box-shadow: 0 0 0 1px #3b82f6; }
     .card.active { border-color: #60a5fa; background: #1e3a5f; }
+    .card.fav { border-color: #f59e0b; }
+
+    .fav-btn {
+      background: none; border: none; font-size: 1.1rem; cursor: pointer;
+      line-height: 1; padding: 0.1rem 0.2rem; color: #475569;
+      transition: color 0.15s, transform 0.1s;
+    }
+    .fav-btn:hover { transform: scale(1.2); }
+    .fav-btn.on { color: #f59e0b; }
 
     .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
     .card-name { font-weight: 600; font-size: 1rem; color: #f1f5f9; }
@@ -118,7 +134,10 @@
 
 <header>
   <h1>📊 決算モニター</h1>
-  <span id="last-updated"></span>
+  <div style="display:flex;align-items:center;gap:0.75rem;">
+    <button id="fav-toggle">☆ お気に入り</button>
+    <span id="last-updated"></span>
+  </div>
 </header>
 
 <div id="search-bar">
@@ -144,6 +163,31 @@
 const HISTORY_URL = "./data/history.json";
 let allData = {};
 let charts = {};
+
+// ── お気に入り ────────────────────────────────────────────────────────────────
+const FAV_KEY = "earnings_favorites";
+let favorites = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
+let favOnly = false;
+
+function saveFavorites() {
+  localStorage.setItem(FAV_KEY, JSON.stringify([...favorites]));
+}
+
+function toggleFavorite(code, btn) {
+  if (favorites.has(code)) {
+    favorites.delete(code);
+    btn.textContent = "☆";
+    btn.classList.remove("on");
+    document.querySelector(`.card[data-code="${code}"]`)?.classList.remove("fav");
+  } else {
+    favorites.add(code);
+    btn.textContent = "★";
+    btn.classList.add("on");
+    document.querySelector(`.card[data-code="${code}"]`)?.classList.add("fav");
+  }
+  saveFavorites();
+  if (favOnly) renderCards(allData, document.getElementById("search").value);
+}
 
 // ── ユーティリティ ──────────────────────────────────────────────────────────
 
@@ -209,17 +253,27 @@ function buildCard(code, entry) {
       <span>利回り <b>${rec?.dividend_yield != null ? rec.dividend_yield + "%" : "N/A"}</b></span>
     </div>`;
 
+  const isFav = favorites.has(code);
+  if (isFav) card.classList.add("fav");
+
   card.innerHTML = `
     <div class="card-header">
       <div>
         <div class="card-name">${name}</div>
         <div class="card-date">${fmtDate(rec?.date ?? "")} ${rec?.doc_type ?? ""}</div>
       </div>
-      <span class="card-code">${code}</span>
+      <div style="display:flex;align-items:center;gap:0.4rem;">
+        <button class="fav-btn${isFav ? " on" : ""}" data-code="${code}">${isFav ? "★" : "☆"}</button>
+        <span class="card-code">${code}</span>
+      </div>
     </div>
     <div class="metrics">${metricsHtml}</div>
     ${badgesHtml}`;
 
+  card.querySelector(".fav-btn").addEventListener("click", e => {
+    e.stopPropagation();
+    toggleFavorite(code, e.currentTarget);
+  });
   card.addEventListener("click", () => openDetail(code));
   return card;
 }
@@ -229,11 +283,10 @@ function renderCards(data, filter = "") {
   container.innerHTML = "";
   const lower = filter.toLowerCase();
   const entries = Object.entries(data)
-    .filter(([code, entry]) =>
-      !lower ||
-      code.includes(lower) ||
-      entry.name.toLowerCase().includes(lower)
-    )
+    .filter(([code, entry]) => {
+      if (favOnly && !favorites.has(code)) return false;
+      return !lower || code.includes(lower) || entry.name.toLowerCase().includes(lower);
+    })
     .sort(([, a], [, b]) => {
       const da = latestRecord(a)?.date ?? "";
       const db = latestRecord(b)?.date ?? "";
@@ -329,6 +382,13 @@ document.getElementById("overlay").addEventListener("click", closeDetail);
 
 document.getElementById("search").addEventListener("input", e => {
   renderCards(allData, e.target.value);
+});
+
+document.getElementById("fav-toggle").addEventListener("click", e => {
+  favOnly = !favOnly;
+  e.currentTarget.classList.toggle("active", favOnly);
+  e.currentTarget.textContent = favOnly ? "★ お気に入りのみ" : "☆ お気に入り";
+  renderCards(allData, document.getElementById("search").value);
 });
 
 // ── 初期ロード ───────────────────────────────────────────────────────────────
