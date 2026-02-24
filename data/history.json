@@ -5628,6 +5628,24 @@
         "per": 21.7,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260224",
+        "time": "15:00",
+        "doc_type": "（訂正・数値データ訂正）「2025年12月期 決算短信〔日本基準〕（連結）」の一部訂正に関するお知らせ",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567377.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 13.0,
+        "per": 21.3,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -16738,6 +16756,24 @@
         "per": 6.4,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260224",
+        "time": "15:30",
+        "doc_type": "2026年3月期第3四半期決算短信〔日本基準〕（連結）（開示事項の追加及び公認会計士等による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260220566631.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 649.0,
+        "per": 6.7,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -24717,6 +24753,24 @@
         "per": 69.1,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260224",
+        "time": "15:40",
+        "doc_type": "2026年3月期第3四半期決算短信〔日本基準〕（連結）（公認会計士等による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260220565976.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 27845.0,
+        "per": 74.6,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -29251,6 +29305,24 @@
         "net_profit": null,
         "net_profit_yoy": null,
         "market_cap": 36213.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      },
+      {
+        "date": "20260224",
+        "time": "16:10",
+        "doc_type": "2026年3月期第3四半期決算短信〔ＩＦＲＳ〕（連結）（監査法人による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260220566295.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 35676.0,
         "per": null,
         "pbr": null,
         "dividend_yield": null
@@ -75479,6 +75551,581 @@
         "net_profit": null,
         "net_profit_yoy": null,
         "market_cap": 50.9,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2995": {
+    "name": "Ｐ－ジェイレックス",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "17:00",
+        "doc_type": "2026年６月期　中間決算短信〔日本基準〕（非連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567628.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": null,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1482": {
+    "name": "ｉＳ米国債七十円へジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567149.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 1452.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1496": {
+    "name": "ｉＳ米＄ＩＧ社債ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567261.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 399.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1497": {
+    "name": "ｉＳ米＄ＨＹ社債ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567271.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 170.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1656": {
+    "name": "ｉＳ米国債七十",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567152.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 413.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2012": {
+    "name": "ｉＳ米国債０３月",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567307.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 258.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2255": {
+    "name": "ｉＳ米国債二十",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567185.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 67.7,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2256": {
+    "name": "ｉＳ米国総合債券",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567189.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 18.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2257": {
+    "name": "ｉＳ＄ＩＧ社債",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567178.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 9.6,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2258": {
+    "name": "ｉＳ＄ＨＹ社債",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567173.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 17.9,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2259": {
+    "name": "ｉＳフランス国債ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567193.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 102.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "236A": {
+    "name": "ｉＳ日本国債七十",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567328.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 137.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "237A": {
+    "name": "ｉＳ米国債二十五",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567314.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 38.8,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "238A": {
+    "name": "ｉＳ米国債二十五ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567323.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 41.9,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2561": {
+    "name": "ｉＳ日本国債",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567278.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 450.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2620": {
+    "name": "ｉＳ米国債一三",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567155.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 117.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2621": {
+    "name": "ｉＳ米国債二十へジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567163.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 1501.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2622": {
+    "name": "ｉＳ新興国債券へジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567286.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 71.1,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2649": {
+    "name": "ｉＳＧＮＭＡ債ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567292.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 32.6,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2853": {
+    "name": "ｉＳ気候外国債券ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567297.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 29.1,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2856": {
+    "name": "ｉＳ米国債三七ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567012.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 461.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2857": {
+    "name": "ｉＳドイツ国債ヘジ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:30",
+        "doc_type": "2026年１月期 決算短信（2025年７月12日～2026年１月11日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567168.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 103.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "380A": {
+    "name": "ＧＸチャイナテック",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "11:00",
+        "doc_type": "2026年1月期（2025年6月20日～2026年1月10日）決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567138.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 17.8,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1596": {
+    "name": "ＮＺＡＭ　Ｅｘ―Ｆ",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "10:00",
+        "doc_type": "2026年１月期　決算短信（2025年７月16日～2026年１月15日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567147.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 36.8,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2527": {
+    "name": "ＮＺＡＭＪリートコア",
+    "records": [
+      {
+        "date": "20260224",
+        "time": "10:00",
+        "doc_type": "2026年１月期　決算短信（2025年７月16日～2026年１月15日）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260224567144.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 348.0,
         "per": null,
         "pbr": null,
         "dividend_yield": null
