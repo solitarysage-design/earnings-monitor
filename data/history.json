@@ -13960,6 +13960,24 @@
         "per": 24.5,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260225",
+        "time": "16:05",
+        "doc_type": "2026年３月期第３四半期決算短信［日本基準］(連結) （公認会計士等による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260219565026.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 1265.0,
+        "per": 29.4,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -25300,6 +25318,24 @@
         "per": 33.2,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260225",
+        "time": "15:30",
+        "doc_type": "2026年３月期第３四半期決算短信〔日本基準〕(連結)（開示事項の変更及び公認会計士等による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260213561316.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 704.0,
+        "per": 61.9,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -36235,6 +36271,24 @@
         "net_profit_yoy": null,
         "market_cap": 931.0,
         "per": 24.4,
+        "pbr": null,
+        "dividend_yield": null
+      },
+      {
+        "date": "20260225",
+        "time": "16:00",
+        "doc_type": "2026年３月期　第３四半期決算短信〔日本基準〕（連結）（公認会計士等による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568550.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 890.0,
+        "per": 23.3,
         "pbr": null,
         "dividend_yield": null
       }
@@ -76126,6 +76180,489 @@
         "net_profit": null,
         "net_profit_yoy": null,
         "market_cap": 348.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "8985": {
+    "name": "Ｒ－ＪＨＲ",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "16:00",
+        "doc_type": "2025年12月期　決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260222566956.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 4409.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "2391": {
+    "name": "プラネット",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "15:40",
+        "doc_type": "2026年7月期第2四半期(中間期)決算短信〔日本基準〕(非連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568394.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 89.9,
+        "per": 21.7,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1311": {
+    "name": "ＮＦＴＰＸ３０",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS TOPIX Core 30連動型上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568297.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 211.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1615": {
+    "name": "ＮＦ銀行業",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 東証銀行業株価指数連動型上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568300.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 2753.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1617": {
+    "name": "ＮＦ食品Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 食品（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568306.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 55.9,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1618": {
+    "name": "ＮＦエネ資源Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS エネルギー資源（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568311.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 21.8,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1619": {
+    "name": "ＮＦ建設資材Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 建設・資材（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568313.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 134.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1620": {
+    "name": "ＮＦ素材化学Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 素材・化学（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568317.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 14.9,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1621": {
+    "name": "ＮＦ医薬品Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 医薬品（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568319.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 59.7,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1622": {
+    "name": "ＮＦ自動車Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 自動車・輸送機（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568324.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 42.2,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1623": {
+    "name": "ＮＦ鉄鋼非鉄Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 鉄鋼・非鉄（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568328.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 37.4,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1624": {
+    "name": "ＮＦ機械Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 機械（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568333.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 25.9,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1625": {
+    "name": "ＮＦ電機精密Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 電機・精密（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568336.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 117.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1626": {
+    "name": "ＮＦ情通・他Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 情報通信・サービスその他（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568339.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 47.3,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1627": {
+    "name": "ＮＦ電力ガスＴ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 電力・ガス（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568343.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 36.6,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1628": {
+    "name": "ＮＦ運輸物流Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 運輸・物流（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568345.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 40.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1629": {
+    "name": "ＮＦ商社卸売Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 商社・卸売（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568350.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 264.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1630": {
+    "name": "ＮＦ小売Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 小売（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568354.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 29.1,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1631": {
+    "name": "ＮＦ銀行Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 銀行（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568358.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 209.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1632": {
+    "name": "ＮＦ金融Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 金融（除く銀行）（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568362.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 134.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1633": {
+    "name": "ＮＦ不動産Ｔ１７",
+    "records": [
+      {
+        "date": "20260225",
+        "time": "13:00",
+        "doc_type": "NEXT FUNDS 不動産（TOPIX－17）上場投信 中間決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260225568367.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 37.9,
         "per": null,
         "pbr": null,
         "dividend_yield": null
