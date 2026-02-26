@@ -64634,6 +64634,24 @@
         "per": null,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260226",
+        "time": "16:00",
+        "doc_type": "（訂正・数値データ訂正）「2025年12月期決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226570181.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 217.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -76663,6 +76681,52 @@
         "net_profit": null,
         "net_profit_yoy": null,
         "market_cap": 37.9,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "9215": {
+    "name": "Ｇ－ＣａＳｙ",
+    "records": [
+      {
+        "date": "20260226",
+        "time": "16:00",
+        "doc_type": "（訂正・数値データ訂正）「2025 年 11 月期決算短信〔日本基準〕（連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226569824.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 17.2,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "8963": {
+    "name": "Ｒ－ＩＮＶ",
+    "records": [
+      {
+        "date": "20260226",
+        "time": "15:30",
+        "doc_type": "2025年12月期決算短信(REIT)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226569513.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 5154.0,
         "per": null,
         "pbr": null,
         "dividend_yield": null
