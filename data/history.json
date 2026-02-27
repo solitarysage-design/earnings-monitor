@@ -38949,6 +38949,24 @@
         "per": 19.4,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260227",
+        "time": "16:30",
+        "doc_type": "（訂正）「決算短信補足資料 -2025年12月期 -」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226569988.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 15165.0,
+        "per": 20.1,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -46374,6 +46392,24 @@
         "net_profit_yoy": null,
         "market_cap": 527.0,
         "per": 10.5,
+        "pbr": null,
+        "dividend_yield": null
+      },
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "2026年３月期 第３四半期決算短信〔日本基準〕（連結）（公認会計士等による期中レビューの完了）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260219565642.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 553.0,
+        "per": 11.0,
         "pbr": null,
         "dividend_yield": null
       }
@@ -55608,6 +55644,24 @@
         "net_profit_yoy": null,
         "market_cap": 73.3,
         "per": 30.0,
+        "pbr": null,
+        "dividend_yield": null
+      },
+      {
+        "date": "20260227",
+        "time": "14:00",
+        "doc_type": "（訂正・数値データ訂正）「令和７年12月期 決算短信〔日本基準〕（非連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226569908.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 73.8,
+        "per": 30.2,
         "pbr": null,
         "dividend_yield": null
       }
@@ -68010,6 +68064,24 @@
         "per": 34.4,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "(訂正・数値データ訂正)2026年9月期 第1四半期決算短信[日本基準](連結)の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227571821.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 243.0,
+        "per": 36.2,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -73832,6 +73904,24 @@
         "per": 37.6,
         "pbr": null,
         "dividend_yield": null
+      },
+      {
+        "date": "20260227",
+        "time": "16:00",
+        "doc_type": "2025年12月期決算短信〔ＩＦＲＳ〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227571311.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 86.3,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
       }
     ]
   },
@@ -76728,6 +76818,328 @@
         "net_profit_yoy": null,
         "market_cap": 5154.0,
         "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "7364": {
+    "name": "Ｐ－琉球アスティーダ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "17:00",
+        "doc_type": "2025年12月期 決算短信〔日本基準〕（非連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227571446.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": null,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "398A": {
+    "name": "Ｐ－リアルクオリティ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "16:00",
+        "doc_type": "2025年12月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226570751.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": null,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "4666": {
+    "name": "パーク２４",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "16:00",
+        "doc_type": "2026年10月期　第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226570496.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 3849.0,
+        "per": 16.0,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "7136": {
+    "name": "Ｐ－ウェルビンＧ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "16:00",
+        "doc_type": "2025 年 12 月期 決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227571950.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": null,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "3031": {
+    "name": "ラクーンＨＤ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "2026年４月期 第３四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227571483.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 139.0,
+        "per": 14.8,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "436A": {
+    "name": "Ｇ－サイバーＳＯＬ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "2026年４月期 第３四半期決算短信〔ＩＦＲＳ〕（非連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226570588.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 192.0,
+        "per": 19.2,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "458A": {
+    "name": "Ｐ－プラン・ドゥ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "（訂正）「2025年11月期決算短信〔日本基準〕（非連結）」の一部訂正について",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227570972.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": null,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "4627": {
+    "name": "ナトコ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "2026年10月期　第１四半期決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226569731.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 145.0,
+        "per": 13.4,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "4707": {
+    "name": "キタック",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "令和８年10月期第１四半期決算短信〔日本基準〕(連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260204547424.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 21.6,
+        "per": 11.9,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "5890": {
+    "name": "Ｐ－オフィスバスター",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "15:30",
+        "doc_type": "2025年12月期　決算短信〔日本基準〕（連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227571032.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": null,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "7488": {
+    "name": "ヤガミ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "15:00",
+        "doc_type": "2026年４月期 第３四半期決算短信[日本基準](連結)",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260226570695.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 310.0,
+        "per": 20.6,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "1773": {
+    "name": "ＹＴＬ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "13:45",
+        "doc_type": "2026年６月期第２四半期（2025年10月～2025年12月）決算短信",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260219564878.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 8985.0,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "306A": {
+    "name": "Ｆ－テクロ",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "13:00",
+        "doc_type": "2026年６月期 中間決算短信〔日本基準〕(非連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260227571153.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": null,
+        "per": null,
+        "pbr": null,
+        "dividend_yield": null
+      }
+    ]
+  },
+  "3329": {
+    "name": "東和フード",
+    "records": [
+      {
+        "date": "20260227",
+        "time": "12:15",
+        "doc_type": "2026年4月期 第3四半期決算短信〔日本基準〕（非連結）",
+        "url": "https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120260218564388.pdf",
+        "revenue": null,
+        "revenue_yoy": null,
+        "operating_profit": null,
+        "operating_profit_yoy": null,
+        "ordinary_profit": null,
+        "ordinary_profit_yoy": null,
+        "net_profit": null,
+        "net_profit_yoy": null,
+        "market_cap": 175.0,
+        "per": 31.4,
         "pbr": null,
         "dividend_yield": null
       }
